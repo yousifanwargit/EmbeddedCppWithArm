@@ -4,6 +4,7 @@
 
 RCC_TypeDef* RCC_MemoryMapBase = ((RCC_TypeDef *) RCC_BASE);
 
+RCC_ErrorType_t rcc::rcc_ERR = RCC_OK;
 
 rcc::rcc(){
 	

@@ -22,12 +22,103 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 D:\EmbeddedCppWithArm\EmbeddedCppWithArm.uvprojx
-Project File Date:  07/18/2023
+Project File Date:  08/22/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'STMF103C8'
-".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 0 Warning(s).
+main.cpp(2): warning: In file included from...
+./rcc.h(4): warning: In file included from...
+C:/Users/lenovo/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/lenovo/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/lenovo/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.cpp(2): warning: In file included from...
+./rcc.h(37): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.cpp(3): warning: In file included from...
+./gpio.h(98): warning: defaulted function definitions are a C++11 extension [-Wc++11-extensions]
+                gpio() = default;
+                         ^
+./gpio.h(110): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.cpp(4): warning: In file included from...
+./led.h(58): warning: defaulted function definitions are a C++11 extension [-Wc++11-extensions]
+                led_base() = default;
+                             ^
+./led.h(55): warning: 'led_base' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+                ~led_base();
+                ^
+./led.h(77): warning: 'led' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+                ~led();
+                ^
+./led.h(74): warning: 'Led_ON' overrides a member function but is not marked 'override' [-Wsuggest-override]
+                virtual LED_ErrorType_t Led_ON();
+                                        ^
+./led.h(52): note: overridden virtual function is here
+                virtual LED_ErrorType_t Led_ON() = 0;
+                                        ^
+./led.h(75): warning: 'Led_OFF' overrides a member function but is not marked 'override' [-Wsuggest-override]
+                virtual LED_ErrorType_t Led_OFF();
+                                        ^
+./led.h(53): note: overridden virtual function is here
+                virtual LED_ErrorType_t Led_OFF() = 0;
+                                        ^
+./led.h(76): warning: 'Led_Toggle' overrides a member function but is not marked 'override' [-Wsuggest-override]
+                virtual LED_ErrorType_t Led_Toggle();
+                                        ^
+./led.h(54): note: overridden virtual function is here
+                virtual LED_ErrorType_t Led_Toggle() = 0;
+                                        ^
+./led.h(100): warning: 'led_demmer' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+                ~led_demmer();
+                ^
+./led.h(112): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.cpp(7): warning: no previous extern declaration for non-static variable 'err' [-Wmissing-variable-declarations]
+GPIO_ErrorType_t err;
+                 ^
+main.cpp(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GPIO_ErrorType_t err;
+^
+main.cpp(15): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+        GPIO_PinConfig  pin0(GPIO_PORTA,GPIO_PIN_1, GPIO_u8OUTPUT_PUSH_PULL_2MHZ, GPIO_PIN_SET);
+                                                    ^
+./gpio.h(10): note: expanded from macro 'GPIO_u8OUTPUT_PUSH_PULL_2MHZ'
+#define GPIO_u8OUTPUT_PUSH_PULL_2MHZ    0b0010
+                                        ^
+main.cpp(16): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+        GPIO_PinConfig  pin1(GPIO_PORTA,GPIO_PIN_2, GPIO_u8OUTPUT_PUSH_PULL_2MHZ, GPIO_PIN_SET);
+                                                    ^
+./gpio.h(10): note: expanded from macro 'GPIO_u8OUTPUT_PUSH_PULL_2MHZ'
+#define GPIO_u8OUTPUT_PUSH_PULL_2MHZ    0b0010
+                                        ^
+main.cpp(17): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+        GPIO_PinConfig  pin2(GPIO_PORTA,GPIO_PIN_3, GPIO_u8OUTPUT_PUSH_PULL_2MHZ, GPIO_PIN_SET);
+                                                    ^
+./gpio.h(10): note: expanded from macro 'GPIO_u8OUTPUT_PUSH_PULL_2MHZ'
+#define GPIO_u8OUTPUT_PUSH_PULL_2MHZ    0b0010
+                                        ^
+main.cpp(89): warning: no newline at end of file [-Wnewline-eof]
+}       
+        ^
+main.cpp(88): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+20 warnings generated.
+compiling main.cpp...
+linking...
+Program Size: Code=2008 RO-data=308 RW-data=16 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\EmbeddedCppWithArm.axf" - 0 Error(s), 20 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,11 +145,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
-      Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/system_stm32f10x.c
-Build Time Elapsed:  00:00:00
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

@@ -20,9 +20,9 @@ class rcc
 {
 	
 	public:
-		RCC_ErrorType_t rcc_ERR;
+		static RCC_ErrorType_t rcc_ERR;
 		rcc();
-		RCC_ErrorType_t RCC_gpioPortInit(RCC_GpioPortName_t copy_gpioPortName);
+		static RCC_ErrorType_t RCC_gpioPortInit(RCC_GpioPortName_t copy_gpioPortName);
 	
 	
 	private:

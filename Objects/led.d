@@ -1,4 +1,4 @@
-./objects/main.o: main.cpp STD_TYPES.h rcc.h \
+./objects/led.o: led.cpp STD_TYPES.h gpio.h rcc.h \
   C:\Users\lenovo\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h \
   RTE\_STMF103C8\RTE_Components.h \
   C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h \
@@ -9,4 +9,4 @@
   C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h \
   C:\Users\lenovo\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h \
-  gpio.h led.h
+  led.h

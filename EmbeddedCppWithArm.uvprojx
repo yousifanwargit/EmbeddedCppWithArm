@@ -52,7 +52,7 @@
           <OutputName>EmbeddedCppWithArm</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -362,7 +362,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -371,7 +371,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>.\Objects\EmbeddedCppWithArm.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -394,10 +394,47 @@
               <FileType>5</FileType>
               <FilePath>.\rcc.h</FilePath>
             </File>
+            <File>
+              <FileName>gpio.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\gpio.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>STD_TYPES.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\STD_TYPES.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>HAL</GroupName>
+          <Files>
+            <File>
+              <FileName>led.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\led.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>led_cfg.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\led_cfg.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\led.h</FilePath>
+            </File>
+            <File>
+              <FileName>led_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\led_cfg.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>APP</GroupName>
